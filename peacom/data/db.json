@@ -1,0 +1,74 @@
+{
+  "events": [
+    {
+      "id": 1,
+      "title": "Alcoholics Anonymous Meeting",
+      "location": "Waterloo On, CA",
+      "price": "12.56",
+      "img": "/img/IMG_0002.png"
+    },
+    {
+      "id": 2,
+      "title": "Paint Night",
+      "location": "Waterloo On, CA",
+      "price": "12.34",
+      "img": "/img/IMG_0003.png"
+    },
+    {
+      "id": 3,
+      "title": "Art Show",
+      "location": "Toronto On, CA",
+      "price": "43.21",
+      "img": "/img/IMG_0004.png"
+    },
+    {
+      "id": 4,
+      "title": "Basketball Intermurals",
+      "location": "Kitchener On, CA",
+      "price": "11.12",
+      "img": "/img/IMG_0006.png"
+    },
+    {
+      "id": 5,
+      "title": "Ice Hockey Rink Signups",
+      "location": "Waterloo On, CA",
+      "price": "42.00",
+      "img": "/img/IMG_0009.png"
+    },
+    {
+      "id": 6,
+      "title": "Ballet",
+      "location": "Alaska, CA",
+      "price": "3.99",
+      "img": "/img/IMG_0010.png"
+    },
+    {
+      "id": 7,
+      "title": "Car Show",
+      "location": "123 street, CA",
+      "price": "19.99",
+      "img": "/img/IMG_0014.png"
+    },
+    {
+      "id": 8,
+      "title": "Friends Meetup",
+      "location": "Waterloo On, CA",
+      "price": "7.20",
+      "img": "/img/IMG_0016.png"
+    },
+    {
+      "id": 9,
+      "title": "Hockey Game",
+      "location": "Waterloo On, CA",
+      "price": "3.60",
+      "img": "/img/IMG_0017.png"
+    },
+    {
+      "id": 10,
+      "title": "Music Concert",
+      "location": "Waterloo On, CA",
+      "price": "95.00",
+      "img": "/img/IMG_0019.png"
+    }
+  ]
+}
