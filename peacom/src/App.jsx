@@ -14,6 +14,8 @@ import AboutUs from "./pages/AboutUs";
 import Gallery, { eventsLoader } from "./pages/Gallery";
 import Create, { createAction } from "./pages/Create";
 import Test from "./pages/Test";
+import { Box } from "@chakra-ui/react";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -24,13 +26,18 @@ const router = createBrowserRouter(
       <Route path="test" element={<Test />} action={createAction} />
       <Route path="create" element={<Create />} action={createAction} />
       <Route path="about-us" element={<AboutUs />} />
+      <Route path="profile" element={<Profile />} />
       <Route path="gallery" element={<Gallery />} loader={eventsLoader} />
     </Route>
   )
 );
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Box minHeight="100vh" sx={{ "background-color": "#E5E5E5" }}>
+      <RouterProvider router={router} />
+    </Box>
+  );
 }
 
 export default App;

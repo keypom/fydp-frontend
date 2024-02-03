@@ -51,13 +51,15 @@ export default function Navbar() {
         </Box>
 
         <Box>
-          <Avatar name="tester" bg="green" src="/img/IMG_0002.jpg" alt="pea">
-            <AvatarBadge width="1.3em" bg="teal.500">
-              <Text fontSize="xs" color="white">
-                3
-              </Text>
-            </AvatarBadge>
-          </Avatar>
+          <NavLink to="/profile">
+            <Avatar name="tester" bg="green" src="/img/IMG_0002.jpg" alt="pea">
+              <AvatarBadge width="1.3em" bg="teal.500">
+                <Text fontSize="xs" color="white">
+                  3
+                </Text>
+              </AvatarBadge>
+            </Avatar>
+          </NavLink>
         </Box>
       </HStack>
     </Flex>

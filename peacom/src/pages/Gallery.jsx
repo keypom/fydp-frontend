@@ -22,7 +22,7 @@ export default function Gallery() {
       <SimpleGrid spacing={10} minChildWidth="300px">
         {events &&
           events.map((event) => (
-            <Card key={event.id} bg="gray.200">
+            <Card key={event.id} bg="white">
               <CardHeader>
                 <Image src={event.img} alt={event.title} />
               </CardHeader>

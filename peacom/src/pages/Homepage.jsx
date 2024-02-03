@@ -1,22 +1,25 @@
-import { Box, SimpleGrid } from "@chakra-ui/react";
+import { Button, Divider, Heading, Text, VStack } from "@chakra-ui/react";
+import { NavLink } from "react-router-dom";
 
 export default function Homepage() {
   return (
-    <SimpleGrid columns={4} spacing={10} minChildWidth="250px" p="10px">
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-      <Box bg="white" h="200px" border="1px solid"></Box>
-    </SimpleGrid>
+    <VStack p="10" justify="center">
+      <Heading as="h1" justify="center" size="2xl">
+        Ticketing Done Right
+      </Heading>
+      <Divider my="5" bg="black" />
+      <NavLink justify="center" to="/gallery">
+        <Button colorScheme="green" size="lg">
+          Browse Our Events
+        </Button>
+      </NavLink>
+      <Text p="10">
+        <NavLink justify="center" to="/gallery">
+          <Text colorScheme="green" size="lg">
+            About Us
+          </Text>
+        </NavLink>
+      </Text>
+    </VStack>
   );
 }
