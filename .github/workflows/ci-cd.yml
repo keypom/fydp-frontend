@@ -5,8 +5,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Go to the code directory
-        run: cd peacom
+      - name: Ls
+        run: ls
+      - name: go to working directory
+        run: cd ./src
       - name: Checkout Code
         uses: actions/checkout@v3
       - name: Install Node
