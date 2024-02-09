@@ -18,9 +18,11 @@ import { Box } from "@chakra-ui/react";
 import Profile from "./pages/Profile";
 import Event from "./pages/Event";
 
+const root = "fydp-frontend";
+
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<RootLayout />}>
+    <Route path={root} element={<RootLayout />}>
       <Route index element={<Homepage />} />
       <Route path="checkout" element={<Checkout />} loader={eventsLoader} />
       <Route path="verification" element={<Verification />} />
