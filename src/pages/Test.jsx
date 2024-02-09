@@ -9,7 +9,28 @@ import {
   Tab,
   TabPanels,
   TabPanel,
+  useDisclosure,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalCloseButton,
+  ModalBody,
+  ModalFooter,
+  FormControl,
+  FormLabel,
+  Input,
+  FormHelperText,
+  NumberInput,
+  NumberInputField,
+  NumberInputStepper,
+  NumberIncrementStepper,
+  NumberDecrementStepper,
+  FormErrorMessage,
 } from "@chakra-ui/react";
+import { useState } from "react";
+import { Form } from "react-router-dom";
 
 export default function Test() {
   const boxStyles = {
@@ -23,6 +44,13 @@ export default function Test() {
       bg: "blue.300",
     },
   };
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  //email input
+  const [input, setInput] = useState("");
+  const handleInputChange = (e) => setInput(e.target.value);
+  const isError = input === "";
 
   return (
     <Container as="section" maxWidth="5xl" py="20px">
@@ -72,6 +100,57 @@ export default function Test() {
           </TabPanel>
         </TabPanels>
       </Tabs>
+      <Box>
+        <Button onClick={onOpen}>Trigger modal</Button>
+
+        <Modal
+          onClose={onClose}
+          closeOnOverlayClick={false}
+          size={"xl"}
+          isOpen={isOpen}
+          isCentered
+        >
+          <ModalOverlay />
+          <ModalContent>
+            <ModalHeader> Purchase Modal </ModalHeader>
+            <ModalCloseButton />
+            <ModalBody>Select number of tickets</ModalBody>
+            <Form method="post" action="/test">
+              <FormLabel>Ticket Amount</FormLabel>
+              <NumberInput max={50} min={1}>
+                <NumberInputField />
+                <NumberInputStepper>
+                  <NumberIncrementStepper />
+                  <NumberDecrementStepper />
+                </NumberInputStepper>
+              </NumberInput>
+
+              <FormControl isInvalid={isError}>
+                <FormLabel>Email</FormLabel>
+                <Input
+                  type="email"
+                  value={input}
+                  onChange={handleInputChange}
+                />
+                {!isError ? (
+                  <FormHelperText>
+                    No account will be created, ensure your email is correct
+                  </FormHelperText>
+                ) : (
+                  <FormErrorMessage> Email is required. </FormErrorMessage>
+                )}
+              </FormControl>
+
+              <Button type="submit" colorScheme="green">
+                Proceed to checkout
+              </Button>
+            </Form>
+            <ModalFooter>
+              <Button onClick={onClose}>Close</Button>
+            </ModalFooter>
+          </ModalContent>
+        </Modal>
+      </Box>
     </Container>
   );
 }

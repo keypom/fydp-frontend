@@ -16,6 +16,7 @@ import Create, { createAction } from "./pages/Create";
 import Test from "./pages/Test";
 import { Box } from "@chakra-ui/react";
 import Profile from "./pages/Profile";
+import Event from "./pages/Event";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -28,6 +29,21 @@ const router = createBrowserRouter(
       <Route path="about-us" element={<AboutUs />} />
       <Route path="profile" element={<Profile />} />
       <Route path="gallery" element={<Gallery />} loader={eventsLoader} />
+      <Route
+        path="gallery/:eventID"
+        element={<Event />}
+        loader={eventsLoader}
+      />
+      <Route
+        path="secondary-market"
+        element={<Gallery isSecondary={true} />}
+        loader={eventsLoader}
+      />
+      <Route
+        path="secondary-market/:eventID"
+        element={<Event isSecondary={true} />}
+        loader={eventsLoader}
+      />
     </Route>
   )
 );

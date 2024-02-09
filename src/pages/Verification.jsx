@@ -57,8 +57,12 @@ export default function Verification() {
                 </Text>
               </HStack>
             </Box>
-            <Button rightIcon={<CheckCircleIcon />} colorScheme="green">
-              Continue To Payment
+            <Button
+              rightIcon={<CheckCircleIcon />}
+              colorScheme="green"
+              onClick={showToast}
+            >
+              Verify Ticket
             </Button>
           </Box>
         </Box>
