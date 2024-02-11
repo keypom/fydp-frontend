@@ -34,13 +34,14 @@ export default function Gallery(props) {
         {events &&
           events.map((event) => (
             <Card key={event.id} bg="white">
-              <NavLink to={event.id}>
+              <NavLink to={"../gallery/" + event.id}>
                 <CardHeader>
                   <Image src={event.img} alt={event.title} />
                 </CardHeader>
                 <CardBody color="black">
                   <Heading as="h2" size="sm">
                     {event.title}
+                    {console.log(event.img)}
                   </Heading>
                   <Text color="green">${event.price}</Text>
                   <Text>Event on {event.date}</Text>
