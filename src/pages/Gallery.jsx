@@ -23,8 +23,6 @@ export default function Gallery(props) {
   const isSecondary = props.isSecondary || false;
   const events = useLoaderData().events;
 
-  console.log(events);
-
   return (
     <Box p="10">
       {isSecondary ? (
@@ -44,7 +42,6 @@ export default function Gallery(props) {
                 <CardBody color="black">
                   <Heading as="h2" size="sm">
                     {event.title}
-                    {console.log(event.img)}
                   </Heading>
                   <Text color="green">${event.price}</Text>
                   <Text>Event on {event.date}</Text>
