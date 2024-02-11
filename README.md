@@ -9,7 +9,8 @@ Currently, two official plugins are available:
 
 useful commands:
 yarn run dev
-json-server -w ./data/db.json
+
+<!-- no longer needed: json-server -w ./data/db.json -->
 
 basic setup using this tutorial:
 https://www.youtube.com/watch?v=yO8XWvi0Hms&list=PL4cUxeGkcC9hcnIeryurNMMcGBHp7AYlP&index=4

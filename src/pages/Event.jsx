@@ -40,7 +40,7 @@ Event.propTypes = {
 
 export default function Event(props) {
   const isSecondary = props.isSecondary || false;
-  const events = useLoaderData();
+  const events = useLoaderData().events;
 
   const params = useParams();
   const eventID = params.eventID;

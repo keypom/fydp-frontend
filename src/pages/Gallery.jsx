@@ -12,6 +12,7 @@ import {
 } from "@chakra-ui/react";
 import { NavLink, useLoaderData } from "react-router-dom";
 import PropTypes from "prop-types";
+import myData from "../data/db.json";
 
 //props validation
 Gallery.propTypes = {
@@ -20,7 +21,9 @@ Gallery.propTypes = {
 
 export default function Gallery(props) {
   const isSecondary = props.isSecondary || false;
-  const events = useLoaderData();
+  const events = useLoaderData().events;
+
+  console.log(events);
 
   return (
     <Box p="10">
@@ -58,7 +61,7 @@ export default function Gallery(props) {
 }
 
 export const eventsLoader = async () => {
-  const res = await fetch("http://localhost:3000/events");
+  // const res = await fetch("http://localhost:3000/events");
 
-  return res.json();
+  return myData;
 };
