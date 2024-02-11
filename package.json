@@ -7,17 +7,35 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start-stripe-server": "node src/pages/server.js"
   },
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
     "@chakra-ui/react": "^2.8.2",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@near-js/accounts": "^0.1.3",
+    "@near-js/crypto": "^0.0.4",
+    "@near-js/keystores-browser": "^0.0.4",
+    "@near-js/keystores-node": "^0.0.4",
+    "@near-js/utils": "^0.0.4",
+    "@near-js/wallet-account": "^0.0.6",
+    "@near-wallet-selector/core": "^8.0.3",
+    "@stripe/react-stripe-js": "^2.4.0",
+    "@stripe/stripe-js": "^1.54.2",
+    "base-x": "^4.0.0",
+    "borsh": "^2.0.0",
+    "bs58": "^5.0.0",
+    "buffer": "^6.0.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
     "framer-motion": "^11.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^6.21.3"
+    "react-router-dom": "^6.21.3",
+    "safe-buffer": "^5.2.1",
+    "stripe": "^8.222.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
@@ -27,7 +45,8 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "vite": "^5.0.8"
+    "vite": "^5.0.8",
+    "vite-plugin-node-polyfills": "^0.21.0"
   },
   "homepage": "https://keypom.github.io/fydp-frontend"
 }
