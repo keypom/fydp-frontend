@@ -46,7 +46,7 @@ export default function Event(props) {
   const eventID = params.eventID;
 
   //check if the eventID is valid
-  const event = events.find((event) => event.id === eventID);
+  const event = events.find((event) => event.id == eventID);
 
   //modal information
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -78,7 +78,7 @@ export default function Event(props) {
       <Text>Event ID: {eventID}</Text>
       <Card key={event.id} bg="white">
         <CardHeader>
-          <Image src={event.img} alt={event.title} />
+          <Image src={"../" + event.img} alt={event.title} />
         </CardHeader>
 
         <CardBody color="black">

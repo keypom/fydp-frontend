@@ -28,6 +28,7 @@ import {
   NumberIncrementStepper,
   NumberDecrementStepper,
   FormErrorMessage,
+  Image,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { Form } from "react-router-dom";
@@ -59,12 +60,13 @@ export default function Test() {
       </Heading>
       <Text marginLeft="30px"> Lorem ipsum dolor s </Text>
       <Text ml="30px" color="blue.300" fontWeight="bold">
-        {" "}
-        Lorem ipsum dolor 324234234{" "}
+        Lorem ipsum dolor 32423423r
       </Text>
       <Box my="30px" p="20px" bg="orange">
         <Text color="white">In a box</Text>
       </Box>
+
+      <Image src="img/monalisa.png" />
 
       <Box sx={boxStyles}>Hello</Box>
       <Flex bg="gray.200" justify="space-between" wrap="wrap" gap="2">

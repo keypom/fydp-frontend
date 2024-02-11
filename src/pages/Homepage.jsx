@@ -8,13 +8,13 @@ export default function Homepage() {
         Ticketing Done Right
       </Heading>
       <Divider my="5" bg="black" />
-      <NavLink justify="center" to={"/gallery"}>
+      <NavLink justify="center" to={"gallery"}>
         <Button colorScheme="green" size="lg">
           Browse Our Events
         </Button>
       </NavLink>
       <Text p="10">
-        <NavLink justify="center" to={"/about-us"}>
+        <NavLink justify="center" to={"about-us"}>
           <Text colorScheme="green" size="lg">
             About Us
           </Text>

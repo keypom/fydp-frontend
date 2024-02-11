@@ -8,7 +8,7 @@
       "date": "2018-11-11",
       "tickets": "10",
       "price": "12.56",
-      "img": "/img/IMG_0002.png"
+      "img": "img/alcohol.png"
     },
     {
       "id": 2,
@@ -18,7 +18,7 @@
       "date": "2018-11-11",
       "tickets": "10",
       "price": "12.34",
-      "img": "/img/IMG_0003.png"
+      "img": "img/paintticket.png"
     },
     {
       "id": 3,
@@ -28,7 +28,7 @@
       "date": "2022-11-11",
       "tickets": "13",
       "price": "43.21",
-      "img": "/img/IMG_0004.png"
+      "img": "img/monalisa.png"
     },
     {
       "id": 4,
@@ -38,7 +38,7 @@
       "date": "2021-12-12",
       "tickets": "15",
       "price": "11.13",
-      "img": "/img/IMG_0006.png"
+      "img": "img/basketball.png"
     },
     {
       "id": 5,
@@ -48,7 +48,7 @@
       "date": "2021-10-12",
       "tickets": "152",
       "price": "42.00",
-      "img": "/img/IMG_0009.png"
+      "img": "img/hockeyticket.png"
     },
     {
       "id": 6,
@@ -58,7 +58,7 @@
       "date": "2021-10-12",
       "tickets": "12",
       "price": "3.99",
-      "img": "/img/IMG_0010.png"
+      "img": "img/ballet.png"
     },
     {
       "id": 7,
@@ -68,7 +68,7 @@
       "date": "2021-10-1",
       "tickets": "14",
       "price": "19.99",
-      "img": "/img/IMG_0014.png"
+      "img": "img/car.png"
     },
     {
       "id": 8,
@@ -78,7 +78,7 @@
       "date": "2021-11-1",
       "tickets": "112",
       "price": "7.20",
-      "img": "/img/IMG_0016.png"
+      "img": "img/friends.png"
     },
     {
       "id": 9,
@@ -88,7 +88,7 @@
       "date": "2011-11-1",
       "tickets": "111",
       "price": "3.60",
-      "img": "/img/IMG_0017.png"
+      "img": "img/hockeygame.png"
     },
     {
       "id": 10,
@@ -98,7 +98,7 @@
       "date": "2024-1-1",
       "tickets": "1000",
       "price": "95.05",
-      "img": "/img/IMG_0019.png"
+      "img": "img/music.png"
     }
   ]
 }
