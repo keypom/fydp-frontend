@@ -9,6 +9,7 @@ export default defineConfig({
   ],
   base: "/fydp-frontend",
   define: {
-    'process.env': {}
+    'process.env': {},
+    global: "globalThis",
   }
 });

@@ -5,11 +5,13 @@ import { useState } from 'react';
 
 import { Near } from "@near-js/wallet-account";
 import { Account } from "@near-js/accounts";
-import { InMemoryKeystore } from "@near-js/keystores";
 import { BrowserLocalStorageKeyStore } from "@near-js/keystores-browser";
 import { KeyPair } from '@near-js/crypto';
 
-export const CheckoutSuccess = async (customerEmail) => {
+// Polyfill global
+//window.global = window;
+
+export const CheckoutSuccess = (customerEmail) => {
     const [txnSuccess, setTxnSuccess] = useState(false);
     
     // Setup NEAR connection
@@ -31,40 +33,44 @@ export const CheckoutSuccess = async (customerEmail) => {
     }
 
     let near = new Near(nearConfig);
-    let fundingAccount = new Account(near,fundingAccountId);
+    let fundingAccount = new Account(near.connection,fundingAccountId);
     console.log("hello from checkout success");
-    let pk2 = await near.connection.signer.getPublicKey(fundingAccountId, NETWORK_ID);
-    console.log(near)
-    console.log(pk2.toString())
-    console.log(fundingAccount)
+    // let pk2 = await near.connection.signer.getPublicKey(fundingAccountId, NETWORK_ID);
+    // console.log(near)
+    // console.log(pk2.toString())
+    // console.log(near.connection.signer)
 
-    try {
-		// With our function call for this drop, we wish to allow the user to lazy mint an NFT
-		await fundingAccount.functionCall({
-			contractId: "v3.keypom.testnet", 
-			methodName: 'create_drop', 
-			args: {
-				deposit_per_use: "500000000000000000000000",
-            },
-			gas: "300000000000000",
-			// Attcned depot of 1.5 $NEAR for creating the drop
-			attachedDeposit: "1500000000000000000000000"
-		});
-        setTxnSuccess(true);
-	} catch(e) {
-		console.log('error creating drop: ', e);
-	}
-    if(txnSuccess){
+    async function testTxn(){
+        try {
+            console.log(fundingAccount);
+            // With our function call for this drop, we wish to allow the user to lazy mint an NFT
+            await fundingAccount.functionCall({
+                contractId: "v3.keypom.testnet", 
+                methodName: 'create_drop', 
+                args: {
+                    deposit_per_use: "500000000000000000000000",
+                },
+                gas: "300000000000000",
+                // Attcned depot of 1.5 $NEAR for creating the drop
+                attachedDeposit: "1500000000000000000000000"
+            });
+            setTxnSuccess(true);
+        } catch(e) {
+            console.log('error creating drop: ', e);
+        }
+    }
+    testTxn();
+    if (txnSuccess) {
         return (
-            <div>
-                <img src={logo} alt="Confirmation Graphic" />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                <img src={logo} alt="Confirmation Graphic" style={{ width: "25%", height: "25%" }} />
                 <p>Your ticket has been sent to your inbox: {customerEmail}.</p>
             </div>
         );
-    }else{
+    } else {
         return (
-            <div>
-                <img src={xLogo} alt="Confirmation Graphic" />
+            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center" }}>
+                <img src={xLogo} alt="Confirmation Graphic" style={{ width: "25%", height: "25%" }} />
                 <p>Transaction Failed! Womp Womp.</p>
             </div>
         );
